@@ -322,11 +322,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114120121335869450, guid: aea27a740d890c44697d9111b1b7e8db,
-        type: 2}
-      propertyPath: goalObject
-      value: 
-      objectReference: {fileID: 1896652643}
     - target: {fileID: 114219952751503688, guid: aea27a740d890c44697d9111b1b7e8db,
         type: 2}
       propertyPath: ordered_goals.Array.data[0]
@@ -347,26 +342,11 @@ Prefab:
       propertyPath: ordered_goals.Array.data[3]
       value: 
       objectReference: {fileID: 1898942133}
-    - target: {fileID: 114219952751503688, guid: aea27a740d890c44697d9111b1b7e8db,
+    - target: {fileID: 114120121335869450, guid: aea27a740d890c44697d9111b1b7e8db,
         type: 2}
-      propertyPath: goalSwitchTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114739991579763666, guid: aea27a740d890c44697d9111b1b7e8db,
-        type: 2}
-      propertyPath: MAXSPEED
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114139839847123700, guid: aea27a740d890c44697d9111b1b7e8db,
-        type: 2}
-      propertyPath: goalRadius
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114439094521122578, guid: aea27a740d890c44697d9111b1b7e8db,
-        type: 2}
-      propertyPath: goalRadius
-      value: 0.5
-      objectReference: {fileID: 0}
+      propertyPath: goalObject
+      value: 
+      objectReference: {fileID: 1896652643}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aea27a740d890c44697d9111b1b7e8db, type: 2}
   m_IsPrefabParent: 0
@@ -381,11 +361,26 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 647704823}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02c60b686c5d29d4194ca94023f378b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ef3b29d1034b1a47a2c4780ae89a6b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goalRadius: 0.5
+  slowRadius: 2.5
+  time_to_target: 1.25
+--- !u!114 &647704825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647704823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecda0920c09a1e418eb54472059ad2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1709250168523110, guid: 4ad6ab3ffd478cb4eb76709d8abc3d86, type: 2}
 --- !u!1 &944911277
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,11 +476,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1017679287}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02c60b686c5d29d4194ca94023f378b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ecda0920c09a1e418eb54472059ad2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 1348744951429228, guid: c93682f5adcf4ed40a39eafd13003b43, type: 2}
 --- !u!1 &1404576217
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +751,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114756134134077236, guid: 1c8a66145a3b4024b82b4c1894dd9de8,
+        type: 2}
+      propertyPath: goalObject
+      value: 
+      objectReference: {fileID: 1896652643}
     - target: {fileID: 114619136459328316, guid: 1c8a66145a3b4024b82b4c1894dd9de8,
         type: 2}
       propertyPath: ordered_goals.Array.data[0]
@@ -775,25 +776,15 @@ Prefab:
       propertyPath: ordered_goals.Array.data[3]
       value: 
       objectReference: {fileID: 2118979623}
-    - target: {fileID: 114756134134077236, guid: 1c8a66145a3b4024b82b4c1894dd9de8,
+    - target: {fileID: 114427293265219380, guid: 1c8a66145a3b4024b82b4c1894dd9de8,
         type: 2}
-      propertyPath: goalObject
-      value: 
-      objectReference: {fileID: 1896652643}
-    - target: {fileID: 114619136459328316, guid: 1c8a66145a3b4024b82b4c1894dd9de8,
-        type: 2}
-      propertyPath: goalSwitchTime
-      value: 2
+      propertyPath: MAXANGULAR
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114427293265219380, guid: 1c8a66145a3b4024b82b4c1894dd9de8,
         type: 2}
-      propertyPath: MAXSPEED
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114373291880020706, guid: 1c8a66145a3b4024b82b4c1894dd9de8,
-        type: 2}
-      propertyPath: radius_of_satisfaction
-      value: 0.5
+      propertyPath: MAXROTATION
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c8a66145a3b4024b82b4c1894dd9de8, type: 2}

@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 114365401441626118}
   - component: {fileID: 114373291880020706}
   - component: {fileID: 114619136459328316}
+  - component: {fileID: 114356514926703568}
   m_Layer: 0
   m_Name: KinematicBoid
   m_TagString: Untagged
@@ -162,6 +163,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1313500188557858}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114356514926703568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1897823991633062}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c60b686c5d29d4194ca94023f378b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114365401441626118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -197,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 216575386d8d1ad4eb86920b0bfa8fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAXSPEED: 5
+  MAXSPEED: 10
   MAXANGULAR: 0
   MAXACCEL: 10
   MAXROTATION: 0
