@@ -1,5 +1,8 @@
-# GameAI
+### Unity C# AI for Games
 
-Application for AI for Video Games course at University of Utah
+[Basic Steering](https://www.youtube.com/watch?v=girlmIxtDv0)
 
-Developed in Unity3D Engine Version 2017.03
+[Basic Pathfinding](https://www.youtube.com/watch?v=0CxXPmaL3xM)
+
+
+<img height="300" src="https://github.com/drwiner/UnityAI4Games/blob/master/boid_tile_world.jpg" alt="Boid" />
