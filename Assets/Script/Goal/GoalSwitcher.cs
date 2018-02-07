@@ -13,8 +13,8 @@ namespace GoalNamespace
         private int goal_index = 0;
         public List<GameObject> ordered_goals;
         private float time_since_goal_switch = 0f;
-        // Use this for initialization
 
+        // Use this for initialization
         void Start()
         {
             goal_script = GetComponent<Goal>();
@@ -24,9 +24,11 @@ namespace GoalNamespace
         // Update is called once per frame
         void Update()
         {
-            time_since_goal_switch += Time.deltaTime;
-            
-            if (time_since_goal_switch > goalSwitchTime)
+            //time_since_goal_switch += Time.deltaTime;
+
+            GameObject current_target = ordered_goals[goal_index];
+
+            if (Vector3.Distance(transform.position, current_target.transform.position) < 0.75f)
             {
                 if (goal_index >= ordered_goals.Count - 1)
                 {
@@ -36,8 +38,9 @@ namespace GoalNamespace
                 {
                     goal_index += 1;
                 }
+
                 goal_script.setGoal(ordered_goals[goal_index]);
-                time_since_goal_switch = 0f;
+                //time_since_goal_switch = 0f;
             }
         }
     }

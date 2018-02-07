@@ -347,6 +347,26 @@ Prefab:
       propertyPath: ordered_goals.Array.data[3]
       value: 
       objectReference: {fileID: 1898942133}
+    - target: {fileID: 114219952751503688, guid: aea27a740d890c44697d9111b1b7e8db,
+        type: 2}
+      propertyPath: goalSwitchTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114739991579763666, guid: aea27a740d890c44697d9111b1b7e8db,
+        type: 2}
+      propertyPath: MAXSPEED
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114139839847123700, guid: aea27a740d890c44697d9111b1b7e8db,
+        type: 2}
+      propertyPath: goalRadius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114439094521122578, guid: aea27a740d890c44697d9111b1b7e8db,
+        type: 2}
+      propertyPath: goalRadius
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aea27a740d890c44697d9111b1b7e8db, type: 2}
   m_IsPrefabParent: 0
@@ -361,14 +381,11 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 647704823}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ef3b29d1034b1a47a2c4780ae89a6b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 02c60b686c5d29d4194ca94023f378b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goalRadius: 0.5
-  slowRadius: 2.5
-  time_to_target: 1.25
 --- !u!1 &944911277
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +470,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1017679287 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1055493951374422, guid: aea27a740d890c44697d9111b1b7e8db,
+    type: 2}
+  m_PrefabInternal: {fileID: 357390090}
+--- !u!114 &1017679288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1017679287}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c60b686c5d29d4194ca94023f378b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1404576217
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,6 +780,21 @@ Prefab:
       propertyPath: goalObject
       value: 
       objectReference: {fileID: 1896652643}
+    - target: {fileID: 114619136459328316, guid: 1c8a66145a3b4024b82b4c1894dd9de8,
+        type: 2}
+      propertyPath: goalSwitchTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114427293265219380, guid: 1c8a66145a3b4024b82b4c1894dd9de8,
+        type: 2}
+      propertyPath: MAXSPEED
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114373291880020706, guid: 1c8a66145a3b4024b82b4c1894dd9de8,
+        type: 2}
+      propertyPath: radius_of_satisfaction
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c8a66145a3b4024b82b4c1894dd9de8, type: 2}
   m_IsPrefabParent: 0
