@@ -9,7 +9,7 @@ public class AutoDestroy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        lifetime = 5.0f;
+        lifetime = 10.0f;
     }
 	
 	// Update is called once per frame
