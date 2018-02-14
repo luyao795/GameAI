@@ -7,7 +7,6 @@ namespace GoalNamespace
 
     public class GoalSwitcher : MonoBehaviour
     {
-
         public float goalSwitchTime = 2f;
         private Goal goal_script;
         private int goal_index = 0;

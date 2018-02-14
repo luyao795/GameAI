@@ -32,9 +32,9 @@ namespace SteeringNamespace
         {
             // Decide on behavior
             //ds_force = arrive.getSteering();
-            ds_torque = align.getSteering();
+            //ds_torque = align.getSteering();
 
-            controller.dyno.torque = ds_torque.torque;
+            //controller.dyno.torque = ds_torque.torque;
 
             // Update Kinematic Steering
             kso = char_RigidBody.updateSteering(controller.dyno, Time.deltaTime);
