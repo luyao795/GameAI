@@ -12,7 +12,7 @@ namespace GoalNamespace
         private Goal goal_script;
         private int goal_index = 0;
         public List<GameObject> ordered_goals;
-        private float time_since_goal_switch = 0f;
+        //private float time_since_goal_switch = 0f;
 
         // Use this for initialization
         void Start()

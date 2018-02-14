@@ -23,12 +23,13 @@ public class WanderSteering : MonoBehaviour {
     public Vector3 getSteering()
     {
         float objOrientation = transform.rotation.eulerAngles.y * Mathf.Deg2Rad;
-        wanderOrientation += randomBinomial() * wanderRate;
+        float rand = randomBinomial();
+        wanderOrientation += rand * wanderRate;
+        //Debug.Log(rand);
         float targetOrientation = wanderOrientation + objOrientation;
         Vector3 targetPosition = transform.position + (orientationToVector(objOrientation) * wanderOffset);
         targetPosition = targetPosition + (orientationToVector(targetOrientation) * wanderRadius);
         float maxAcceleration = 10.0f;
-
 
         Vector3 acceleration = targetPosition - transform.position;
         //Debug.Log(acceleration);

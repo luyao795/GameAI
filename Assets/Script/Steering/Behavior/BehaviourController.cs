@@ -25,10 +25,10 @@ namespace SteeringNamespace
         // Update is called once per frame
         void Update()
         {
-            Debug.Log(action);
+            //Debug.Log(action);
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 position = transform.position;
-            Vector3 rayPosition = position + new Vector3(0, 0, 0.9f);
+            Vector3 rayPosition = position + forward.normalized;
             RaycastHit hit;
             isRayHit = Physics.Raycast(rayPosition, forward, out hit);
             if (!isRayHit)
@@ -39,8 +39,9 @@ namespace SteeringNamespace
             {
                 Vector3 targetForward = hit.transform.TransformDirection(Vector3.forward);
                 Vector3 targetPosition = hit.transform.position;
-                if (hit.distance <= 0.5)
+                if (hit.distance <= 1.5f)
                 {
+                    Debug.Log(hit.transform.gameObject.name);
                     action = BehaviourList.BehaviorAction.Bounce;
                 }
                 else
@@ -51,15 +52,31 @@ namespace SteeringNamespace
 
             if (action.Equals(BehaviourList.BehaviorAction.Wander))
             {
-                //Debug.Log("Wandering");
-                dyno.force = wander.getSteering();
-                Vector2 rot = new Vector2(char_kinematic.getVelocity().x, char_kinematic.getVelocity().z);
-                transform.rotation = wander.getRotation(rot);
+                StartWandering();
             }
             else
             {
-
+                StartBouncing();
+                action = BehaviourList.BehaviorAction.Wander;
             }
+        }
+
+        void StartWandering()
+        {
+            dyno.force = wander.getSteering();
+            Vector2 rot = new Vector2(char_kinematic.getVelocity().x, char_kinematic.getVelocity().z);
+            transform.rotation = wander.getRotation(rot);
+        }
+
+        void StartBouncing()
+        {
+            dyno.force = wander.getSteering();
+            dyno.force.x *= -1;
+            dyno.force.z *= -1;
+            char_kinematic.setVelocity(new Vector3(-char_kinematic.getVelocity().x, char_kinematic.getVelocity().y, -char_kinematic.getVelocity().z));
+            Vector2 rot = new Vector2(char_kinematic.getVelocity().x, char_kinematic.getVelocity().z);
+            transform.rotation = wander.getRotation(rot);
+
         }
     }
 }

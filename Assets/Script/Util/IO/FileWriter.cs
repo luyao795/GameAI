@@ -46,7 +46,7 @@ namespace SteeringNamespace
                 }
                 else
                 {
-                    Debug.Log("Write complete.");
+                    //Debug.Log("Write complete.");
                     sw.Close();
                 }
             }
