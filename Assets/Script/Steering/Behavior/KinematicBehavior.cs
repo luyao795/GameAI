@@ -4,10 +4,8 @@ using UnityEngine;
 
 namespace SteeringNamespace
 {
-
     public class KinematicBehavior : MonoBehaviour
     {
-
         private Kinematic char_kinematic;
         private KinematicSteering ks;
         private DynoSteering ds;
@@ -17,9 +15,8 @@ namespace SteeringNamespace
         private DynoAlign align;
 
         private KinematicSteering seeking_output;
-        private Vector3 new_velocity;
-
-        private WanderSteering wander;
+        //private WanderSteering wander;
+        private BehaviourController controller;
 
         // Use this for initialization
         void Start()
@@ -28,15 +25,16 @@ namespace SteeringNamespace
             seek = GetComponent<KinematicSeek>();
             arrive = GetComponent<KinematicArrive>();
             align = GetComponent<DynoAlign>();
-            wander = GetComponent<WanderSteering>();
+            //wander = GetComponent<WanderSteering>();
+            controller = GetComponent<BehaviourController>();
+            controller.type = BehaviourList.BehaviorType.Kinematic;
         }
 
         // Update is called once per frame
         void Update()
         {
             ks = new KinematicSteering();
-            ds = new DynoSteering();
-            
+            //ds = new DynoSteering();
 
             //// Decide on behavior
             ////seeking_output = seek.updateSteering();
@@ -51,15 +49,16 @@ namespace SteeringNamespace
             //char_kinematic.setOrientation(new_orient);
             //char_kinematic.setRotation(0f);
 
-            ds.force = wander.getSteering();
+            ////ds.force = wander.getSteering();
+            
 
             // Update Kinematic Steering
-            kso = char_kinematic.updateSteering(ds, Time.deltaTime);
-
+            kso = char_kinematic.updateSteering(controller.dyno, Time.deltaTime);
+            
             transform.position = new Vector3(kso.position.x, transform.position.y, kso.position.z);
             //transform.rotation = Quaternion.Euler(0f, kso.orientation * Mathf.Rad2Deg, 0f);
-            Vector2 rot = new Vector2(char_kinematic.getVelocity().x, char_kinematic.getVelocity().z);
-            transform.rotation = wander.getRotation(rot);
+           //// Vector2 rot = new Vector2(char_kinematic.getVelocity().x, char_kinematic.getVelocity().z);
+           //// transform.rotation = wander.getRotation(rot);
         }
 
         private void kinematicSeekBehavior()
@@ -75,7 +74,7 @@ namespace SteeringNamespace
             char_kinematic.setRotation(0f);
 
             // Update Kinematic Steering
-            kso = char_kinematic.updateSteering(ds, Time.deltaTime);
+            kso = char_kinematic.updateSteering(controller.dyno, Time.deltaTime);
 
             transform.position = new Vector3(kso.position.x, transform.position.y, kso.position.z);
             transform.rotation = Quaternion.Euler(0f, kso.orientation * Mathf.Rad2Deg, 0f);

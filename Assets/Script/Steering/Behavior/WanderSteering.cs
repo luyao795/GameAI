@@ -31,7 +31,7 @@ public class WanderSteering : MonoBehaviour {
 
 
         Vector3 acceleration = targetPosition - transform.position;
-        Debug.Log(acceleration);
+        //Debug.Log(acceleration);
 
         acceleration.y = 0.0f;
         acceleration.Normalize();

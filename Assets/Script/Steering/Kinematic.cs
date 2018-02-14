@@ -4,10 +4,8 @@ using UnityEngine;
 
 namespace SteeringNamespace
 {
-
     public class Kinematic : MonoBehaviour
     {
-
         private SteeringParams sp;
         private Vector3 position;
         private float rotation;
@@ -15,6 +13,7 @@ namespace SteeringNamespace
         private Vector3 velc;
         private float height;
         private KinematicSteeringOutput steering;
+        
 
         // Use this for initialization
         void Start()
